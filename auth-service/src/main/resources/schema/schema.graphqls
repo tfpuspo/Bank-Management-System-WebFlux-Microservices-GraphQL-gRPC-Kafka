@@ -1,0 +1,42 @@
+type UserResponse {
+    id: ID
+    username: String
+    email: String
+    createdAt: String!
+}
+
+input UserRequest {
+    username: String!
+    email: String!
+    password: String!
+}
+
+input RegisterInput {
+    username: String!
+    email: String!
+    password: String!
+}
+
+input IdentityVerificationInput {
+    accountNumber: String!
+    dateOfBirth: String!
+    mobileNumber: String!
+}
+
+type IdentityVerificationResult {
+    verified: Boolean!
+    customerId: ID
+    message: String
+}
+
+type Query {
+    user(id: ID!): UserResponse
+    userByUsername(username: String!): UserResponse
+    allUsers: [UserResponse!]!
+}
+
+type Mutation {
+    createUser(input: UserRequest!): UserResponse!
+    register(input: RegisterInput!): UserResponse!
+    verifyIdentity(input: IdentityVerificationInput!): IdentityVerificationResult!
+}
