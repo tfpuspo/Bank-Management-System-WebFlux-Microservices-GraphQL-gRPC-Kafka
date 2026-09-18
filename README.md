@@ -1,7 +1,7 @@
 # Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
 ## Tools & Technology
-- Java 17, Spring Boot 3.2 (Spring WebFlux — reactive, non-blocking)
+- Java 23, Spring Boot 3.5 (Spring WebFlux — reactive, non-blocking)
 - Spring Data R2DBC + PostgreSQL (isolated database per service)
 - GraphQL via Netflix DGS (auth-service)
 - gRPC + Protocol Buffers (internal service-to-service calls)
