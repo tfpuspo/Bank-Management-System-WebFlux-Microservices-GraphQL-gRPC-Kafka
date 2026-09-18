@@ -1,4 +1,4 @@
-# Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC (Work-in-progress)
+# Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
 ## Tools & Technology
 - Java 17, Spring Boot 3.2 (Spring WebFlux — reactive, non-blocking)
