@@ -17,6 +17,7 @@ Tools & Technology:
 
 
 
+
 Completed Features:
  - User registration (auth-service)
  - Identity verification via account number lookup (auth-service → account-service)
