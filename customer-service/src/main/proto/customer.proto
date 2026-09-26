@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.puspo.customer;
+option java_multiple_files = true;
+option java_package = "com.puspo.customer.grpc";
+
+service CustomerService {
+  rpc MatchIdentity (IdentityMatchRequest) returns (IdentityMatchResponse);
+}
+message IdentityMatchRequest {
+  string customer_id = 1;
+  string date_of_birth = 2;
+  string mobile_number = 3;
+}
+message IdentityMatchResponse {
+  bool matched = 1;
+}

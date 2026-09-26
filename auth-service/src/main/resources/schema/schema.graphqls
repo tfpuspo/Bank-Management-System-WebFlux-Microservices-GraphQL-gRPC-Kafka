@@ -1,0 +1,66 @@
+type UserResponse {
+    id: ID
+    username: String
+    email: String
+    createdAt: String!
+}
+
+input UserRequest {
+    username: String!
+    email: String!
+    password: String!
+}
+
+input RegisterInput {
+    username: String!
+    email: String!
+    password: String!
+    customerId: ID!
+}
+
+input IdentityVerificationInput {
+    accountNumber: String!
+    dateOfBirth: String!
+    mobileNumber: String!
+}
+
+type IdentityVerificationResult {
+    verified: Boolean!
+    customerId: ID
+    message: String
+}
+
+input GenerateOtpRequest {
+    customerId: ID!
+    mobileNumber: String!
+}
+
+type GenerateOtpResponse {
+    success: Boolean!
+    message: String
+    expiresInSeconds: Int!
+}
+
+input VerifyOtpRequest {
+    customerId: ID!
+    otp: String!
+}
+
+type VerifyOtpResponse {
+    verified: Boolean!
+    message: String
+}
+
+type Query {
+    user(id: ID!): UserResponse
+    userByUsername(username: String!): UserResponse
+    allUsers: [UserResponse!]!
+}
+
+type Mutation {
+    createUser(input: UserRequest!): UserResponse!
+    register(input: RegisterInput!): UserResponse!
+    verifyIdentity(input: IdentityVerificationInput!): IdentityVerificationResult!
+    generateOtp(input: GenerateOtpRequest!): GenerateOtpResponse!
+    verifyOtp(input: VerifyOtpRequest!): VerifyOtpResponse!
+}
