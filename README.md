@@ -1,6 +1,8 @@
 # Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC, Kafka 
 
-A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
+
+## A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
+
 
 
 Tools & Technology:
@@ -12,6 +14,7 @@ Tools & Technology:
  - Kong API Gateway (planned)
  - Docker Compose (planned — local orchestration)
 - React + TypeScript + Tailwind CSS (frontend)
+
 
 
 Completed Features:
