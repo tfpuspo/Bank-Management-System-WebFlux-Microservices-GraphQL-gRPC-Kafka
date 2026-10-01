@@ -32,3 +32,5 @@ Completed Features:
 ![](./image/im5.png)
 ![](./image/im6.png)
 ![](./image/im7.png)
+![](./image/im8.png)
+![](./image/im9.png)
