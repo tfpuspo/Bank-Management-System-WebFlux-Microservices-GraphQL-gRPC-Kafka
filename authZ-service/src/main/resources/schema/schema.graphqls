@@ -1,0 +1,52 @@
+type Alkp {
+    id: ID!
+    label: String!
+    type: String!
+    parentId: ID
+    code: String
+    route: String
+    icon: String
+    menuOrder: Int
+}
+
+input AlkpInput {
+    label: String!
+    type: String!
+    parentId: ID
+    code: String
+    route: String
+    icon: String
+    menuOrder: Int
+}
+
+type UserPermissionOverride {
+    permission: String!
+    effect: String!
+}
+
+type User @key(fields: "id userType customerId") @extends {
+    id: ID! @external
+    userType: String! @external
+    customerId: ID @external
+    roles: [String!]!
+    permissions: [String!]!
+}
+
+type Query {
+    allAlkps: [Alkp!]!
+    alkpsByType(type: String!): [Alkp!]!
+    searchAlkp(type: String, label: String): [Alkp!]!
+    rolesForSubject(subjectId: ID!, subjectType: String!): [String!]!
+    permissionsForRole(roleCode: String!): [String!]!
+    permissionsForSubject(subjectId: ID!, subjectType: String!): [String!]!
+    userPermissionOverrides(subjectId: ID!, subjectType: String!): [UserPermissionOverride!]!
+}
+
+type Mutation {
+    createAlkp(input: AlkpInput!): Alkp!
+    deleteAlkp(id: ID!): Boolean!
+    assignRole(subjectId: ID!, subjectType: String!, roleCode: String!): Boolean!
+    assignPermissionToRole(roleCode: String!, permissionCode: String!): Boolean!
+    setUserPermission(subjectId: ID!, subjectType: String!, permissionCode: String!, effect: String!): Boolean!
+    removeUserPermission(subjectId: ID!, subjectType: String!, permissionCode: String!): Boolean!
+}

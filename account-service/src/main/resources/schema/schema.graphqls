@@ -1,0 +1,45 @@
+type Account {
+    id: ID!
+    accountNumber: String!
+    customerId: ID!
+    accountType: String!
+    balance: Float!
+    status: String!
+    createdAt: String!
+}
+
+input CreateAccountInput {
+    accountNumber: String!
+    customerId: ID!
+    accountType: String!
+    initialDeposit: Float
+}
+
+input OpenAccountInput {
+    firstName: String!
+    lastName: String!
+    dateOfBirth: String!
+    mobileNumber: String!
+    email: String
+    nidNumber: String
+    accountType: String!
+    initialDeposit: Float
+    roleCode: String
+}
+
+type OpenAccountResult {
+    customerId: ID!
+    accountId: ID!
+    accountNumber: String!
+    roleCode: String
+}
+
+type Query {
+    accountByNumber(accountNumber: String!): Account
+    accounts(accountNumber: String): [Account!]!
+}
+
+type Mutation {
+    createAccount(input: CreateAccountInput!): Account!
+    openAccount(input: OpenAccountInput!): OpenAccountResult!
+}

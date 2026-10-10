@@ -1,0 +1,28 @@
+type Customer {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    dateOfBirth: String!
+    mobileNumber: String!
+    email: String
+    nidNumber: String!
+    createdAt: String!
+}
+
+input CreateCustomerInput {
+    firstName: String!
+    lastName: String!
+    dateOfBirth: String!
+    mobileNumber: String!
+    email: String
+    nidNumber: String!
+}
+
+type Query {
+    customerById(id: ID!): Customer
+}
+
+type Mutation {
+    createCustomer(input: CreateCustomerInput!): Customer!
+    rollbackCustomer(id: ID!): Boolean!
+}
