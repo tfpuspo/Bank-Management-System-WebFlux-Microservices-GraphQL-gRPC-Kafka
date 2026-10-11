@@ -27,15 +27,3 @@ Completed Features:
  - Credential setup & account activation — creates username/password linked to verified customer, with welcome notification (auth-service → notification-service)
  - Role-based menu access control system, enabling dynamic role and permission management
 
-![](./images/im1.png)
-![](./images/im2.png)
-![](./images/im3.png)
-![](./images/im4.png)
-![](./images/im5.png)
-![](./images/im6.png)
-![](./images/im7.png)
-![](./images/im8.png)
-![](./images/im9.png)
-![](./images/im10.png)
-![](./images/im11.png)
-![](./images/im12.png)
