@@ -4,12 +4,13 @@
 
 ### A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
+<a href="https://github.com/tfpuspo/Bank-Management-System-WebFlux-Microservices-GraphQL-gRPC-Kafka/tree/main/records/backend_team.mp4">
+  <img src="records/backend_team.png" width="800" alt="Backend team demo">
+</a>
 
-
-
-https://github.com/user-attachments/assets/62c7b0ae-33dc-47f0-bf42-455bfcc50a14
-
-
+<a href="https://github.com/tfpuspo/Bank-Management-System-WebFlux-Microservices-GraphQL-gRPC-Kafka/tree/main/records/customer.mp4">
+  <img src="records/customer.png" width="800" alt="Customer demo">
+</a>
 
 
 
