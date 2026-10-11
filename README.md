@@ -4,25 +4,20 @@
 
 ### A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
-<div align="center">
-  <h2>Banking Application </h2>
-  <hr>
 
+<div align="center">
   <h3>Part 1</h3>
   <a href="https://github.com/user-attachments/assets/3f7610cb-8c1b-4076-a0c6-5075c60422df">
-    <img src="records/backend_team.png" width="700" height="400" alt="Part 1 - Backend team demo">
+    <img src="records/backend_team.png" width="700" height="400" alt="Part 1 - backend_team demo">
   </a>
+</div>
 
+<div align="center">
   <h3>Part 2</h3>
   <a href="https://github.com/user-attachments/assets/08cb881b-fd49-4f82-83b8-f155b535508c">
     <img src="records/customer.png" width="700" height="400" alt="Part 2 - Customer demo">
   </a>
 </div>
-
-
-https://github.com/user-attachments/assets/3f7610cb-8c1b-4076-a0c6-5075c60422df
-
-
 
 
 Tools & Technology:
