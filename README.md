@@ -5,8 +5,6 @@
 
 <video src="./records/backend_team.mp4" controls width="100%"></video>
 
-<video src="./records/customer.mp4" controls width="100%"></video>
-
 
 Tools & Technology:
  - Java 23, Spring Boot 3.5 (Spring WebFlux — reactive, non-blocking)
