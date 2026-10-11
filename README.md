@@ -1,8 +1,11 @@
-# Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC, Kafka 
+## Bank Management System — Spring Webflux, Microservices, GraphQL, gRPC, Kafka 
 
 
-## A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
+### A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
+[▶️](./records/backend_team.mp4)
+
+[▶️](./records/customer.mp4)
 
 
 Tools & Technology:
