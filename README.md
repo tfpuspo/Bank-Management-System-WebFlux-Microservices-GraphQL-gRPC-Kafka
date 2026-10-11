@@ -3,9 +3,9 @@
 
 ### A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
-[▶️](./records/backend_team.mp4)
+<video src="./records/backend_team.mp4" controls width="100%"></video>
 
-[▶️](./records/customer.mp4)
+<video src="./records/customer.mp4" controls width="100%"></video>
 
 
 Tools & Technology:
