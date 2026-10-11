@@ -8,7 +8,7 @@
   <img src="records/backend_team.png" width="800" alt="Backend team demo">
 </a>
 
-<a href="https://github.com/tfpuspo/Bank-Management-System-WebFlux-Microservices-GraphQL-gRPC-Kafka/tree/main/records/customer.mp4">
+<a href="https://github.com/user-attachments/assets/08cb881b-fd49-4f82-83b8-f155b535508c">
   <img src="records/customer.png" width="800" alt="Customer demo">
 </a>
 
