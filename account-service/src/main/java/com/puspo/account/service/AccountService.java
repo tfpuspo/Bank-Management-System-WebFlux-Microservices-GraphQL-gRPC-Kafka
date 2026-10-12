@@ -8,7 +8,5 @@ import reactor.core.publisher.Mono;
 public interface AccountService {
     Mono<AccountResponse> createAccount(CreateAccountRequest request);
     Mono<AccountResponse> getAccountByNumber(String accountNumber);
-
-    // Blank/null accountNumber = all accounts; otherwise partial, case-insensitive match.
     Flux<AccountResponse> searchAccounts(String accountNumber);
 }

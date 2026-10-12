@@ -46,7 +46,7 @@ export async function fetchAlkpsByType(type: string): Promise<Alkp[]> {
   return result.alkpsByType
 }
 
-// Convenience wrapper — this is what the dashboards call to build the sidebar.
+
 export async function fetchMenuAlkps(): Promise<Alkp[]> {
   return fetchAlkpsByType('MENU')
 }

@@ -4,9 +4,6 @@ const { ApolloServer } = require('@apollo/server')
 const { expressMiddleware } = require('@apollo/server/express4')
 const { ApolloGateway, IntrospectAndCompose, RemoteGraphQLDataSource } = require('@apollo/gateway')
 
-// Forwards the caller's Authorization header through to each subgraph.
-// Without this, JWTs never reach auth-service/authZ-service, and every
-// permission check (e.g. SUPER_ADMIN on createAlkp) would silently fail.
 class AuthenticatedDataSource extends RemoteGraphQLDataSource {
   willSendRequest({ request, context }) {
     if (context.authorization) {

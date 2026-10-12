@@ -43,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .switchIfEmpty(Mono.error(new com.puspo.account.exception.ResourceNotFoundException("Customer not found: " + id)));
     }
 
-    /** Compensation for a failed Open Account. Only recently created customers can be removed. */
+    
     @Override
     public Mono<Boolean> rollbackCustomer(UUID id) {
         return customerRepository.findById(id)
@@ -54,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
                     }
                     return customerRepository.deleteById(id).thenReturn(true);
                 })
-                .defaultIfEmpty(true); // already gone = rolled back
+                .defaultIfEmpty(true); 
     }
 
     private CustomerResponse toResponse(Customer customer) {

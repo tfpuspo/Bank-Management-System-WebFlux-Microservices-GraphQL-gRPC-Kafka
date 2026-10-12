@@ -19,8 +19,7 @@ const ACCOUNTS_QUERY = /* GraphQL */ `
   }
 `
 
-// Empty search returns every account (newest first); otherwise a partial,
-// case-insensitive match on the account number.
+
 export async function fetchAccounts(accountNumber?: string): Promise<AccountResult[]> {
   const term = accountNumber?.trim()
   const result = await graphqlRequest<AccountsQueryResult>(ACCOUNTS_QUERY, {

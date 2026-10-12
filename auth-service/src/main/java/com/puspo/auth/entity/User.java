@@ -20,10 +20,6 @@ public class User {
     private String password;
     private UserType userType;
     private LocalDateTime createdAt;
-
-    // The login credential, e.g. "10000001". Generated automatically (no role prefix)
-    // the moment the user is created — staff creation or customer registration.
-    // See UserIdServiceImpl#generate.
     private String userId;
 
     public enum UserType {

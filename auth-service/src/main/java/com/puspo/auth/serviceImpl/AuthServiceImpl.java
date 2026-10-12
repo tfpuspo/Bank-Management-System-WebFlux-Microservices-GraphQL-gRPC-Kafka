@@ -72,13 +72,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Mono<UserResponse> createStaffUser(CreateStaffUserRequest request) {
-        // NOTE: temporarily unprotected so you can bootstrap your first SUPER_ADMIN.
-        // Once at least one SUPER_ADMIN exists, this must be locked down (require
-        // an existing SUPER_ADMIN's token) before this ever runs outside local dev.
-        //
-        // The login userId is generated right here, at creation — the staff member
-        // can log in immediately. Roles/permissions are assigned separately and only
-        // control what they can see after login.
+       
         return userIdService.generate()
                 .flatMap(generatedUserId -> {
                     User user = new User();

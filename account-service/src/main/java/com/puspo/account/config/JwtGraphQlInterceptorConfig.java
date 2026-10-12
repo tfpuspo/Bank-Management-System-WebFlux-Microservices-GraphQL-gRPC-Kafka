@@ -22,7 +22,7 @@ public class JwtGraphQlInterceptorConfig {
                                 ctx.put("token", token);
                             }).build());
                 } catch (Exception ignored) {
-                    // invalid/expired token: leave context empty; resolvers reject as unauthorized
+                    
                 }
             }
             return chain.next(request);

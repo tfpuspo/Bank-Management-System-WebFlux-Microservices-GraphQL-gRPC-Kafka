@@ -52,8 +52,7 @@ public class UserServiceImpl implements UserService {
                     user.setId(null);
                     user.setPassword(passwordEncoder.encode(request.getPassword()));
                     user.setUserId(generatedUserId);
-                    // This legacy endpoint has no userType in its input; without one the
-                    // user could never log in, so default it to STAFF.
+                    
                     if (user.getUserType() == null) {
                         user.setUserType(User.UserType.STAFF);
                     }
@@ -88,9 +87,7 @@ public class UserServiceImpl implements UserService {
                                 "Email already registered: " + request.getEmail()));
                     }
 
-                    // The login userId is generated as part of registration itself and
-                    // saved in the same insert, together with the outbox event, in one
-                    // transaction.
+                    
                     return userIdService.generate()
                             .flatMap(generatedUserId -> {
                                 User user = new User();

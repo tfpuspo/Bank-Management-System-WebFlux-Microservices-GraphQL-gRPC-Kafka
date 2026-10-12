@@ -31,9 +31,7 @@ interface UseMenuTreeResult {
   active: MenuNode | null
 }
 
-// Shared by both StaffDashboard and CustomerDashboard so their menu-resolution
-// logic can never drift apart — only the surrounding shell (header, branding)
-// differs between the two. Same tree, same algorithm, for every user type.
+
 export function useMenuTree(permissions: string[]): UseMenuTreeResult {
   const [tree, setTree] = useState<MenuNode[]>([])
   const [loading, setLoading] = useState(true)
@@ -61,9 +59,7 @@ export function useMenuTree(permissions: string[]): UseMenuTreeResult {
     return () => {
       cancelled = true
     }
-    // permissions are resolved once at login and don't change for the life of
-    // this session, so this only needs to run once per mount.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [])
 
   return { tree, loading, error, activeKey, setActiveKey, active: findByKey(tree, activeKey) }

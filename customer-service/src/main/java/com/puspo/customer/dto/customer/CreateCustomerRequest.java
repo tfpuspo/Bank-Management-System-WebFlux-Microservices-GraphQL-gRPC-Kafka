@@ -9,7 +9,7 @@ import lombok.Setter;
 public class CreateCustomerRequest {
     private String firstName;
     private String lastName;
-    private String dateOfBirth;   // ISO date string, e.g. "2000-01-01"
+    private String dateOfBirth;   
     private String mobileNumber;
     private String email;
     private String nidNumber;

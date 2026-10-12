@@ -41,7 +41,6 @@ export default function OtpVerificationPage({
 
   useEffect(() => {
     requestOtp()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

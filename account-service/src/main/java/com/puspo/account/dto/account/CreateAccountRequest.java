@@ -12,6 +12,6 @@ import java.util.UUID;
 public class CreateAccountRequest {
     private String accountNumber;
     private UUID customerId;
-    private String accountType;      // "SAVINGS" | "CURRENT" | "FIXED_DEPOSIT"
+    private String accountType;      
     private BigDecimal initialDeposit;
 }

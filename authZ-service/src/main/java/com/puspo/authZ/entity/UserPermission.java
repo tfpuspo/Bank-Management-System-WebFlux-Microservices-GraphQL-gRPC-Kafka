@@ -19,11 +19,7 @@ public class UserPermission {
     private UUID subjectId;
     private UUID subjectTypeId;
     private UUID permissionId;
-
-    // "GRANT" = extra permission on top of the user's roles
-    // "DENY"  = removes a permission the user's roles would otherwise give
     private String effect;
-
     private UUID grantedBy;
     private LocalDateTime grantedAt;
 }

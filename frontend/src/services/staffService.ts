@@ -59,7 +59,6 @@ const ALL_USERS_QUERY = /* GraphQL */ `
   }
 `
 
-// Returns every user (staff and customer). Callers filter by userType.
 export async function fetchAllUsers(): Promise<StaffUserResult[]> {
   const result = await graphqlRequest<AllUsersQueryResult>(ALL_USERS_QUERY, {})
   return result.allUsers

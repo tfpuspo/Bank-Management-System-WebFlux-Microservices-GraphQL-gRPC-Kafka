@@ -28,14 +28,14 @@ public class OpenAccountServiceImpl implements OpenAccountService {
 
     @Override
     public Mono<OpenAccountResponse> openAccount(String token, OpenAccountRequest r) {
-        // Validate everything we can BEFORE writing anything
+        
         try {
             Account.AccountType.valueOf(r.getAccountType());
         } catch (Exception e) {
             return Mono.error(new RuntimeException("Invalid account type: " + r.getAccountType()));
         }
 
-        // Step 1: customer (customer DB)
+       
         return customerClient.createCustomer(token, r).flatMap(customerId -> {
 
             CreateAccountRequest acct = new CreateAccountRequest();
@@ -44,13 +44,13 @@ public class OpenAccountServiceImpl implements OpenAccountService {
             acct.setAccountType(r.getAccountType());
             acct.setInitialDeposit(r.getInitialDeposit());
 
-            // Step 2: account (account DB)
+            
             return accountService.createAccount(acct)
                     .onErrorResume(ex -> compensate(token, customerId, null, ex))
                     .flatMap(account -> {
                         UUID accountId = UUID.fromString(account.getId());
 
-                        // Step 3: role (authZ DB), optional
+                        
                         Mono<Void> roleStep = isBlank(r.getRoleCode())
                                 ? Mono.empty()
                                 : authZClient.assignRole(token, customerId, "CUSTOMER", r.getRoleCode())
@@ -64,7 +64,7 @@ public class OpenAccountServiceImpl implements OpenAccountService {
         });
     }
 
-    /** Undo everything created so far, then fail with the original error. */
+    
     private <T> Mono<T> compensate(String token, UUID customerId, UUID accountId, Throwable cause) {
         Mono<Void> deleteAccount = accountId == null
                 ? Mono.empty()

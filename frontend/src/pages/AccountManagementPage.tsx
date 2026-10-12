@@ -67,7 +67,6 @@ export default function AccountManagementPage({ permissions }: MenuComponentProp
     loadAccounts('')
   }
 
-  // Closing the panel refreshes the list so a newly opened account shows up.
   const closePanel = () => {
     setPanelOpen(false)
     if (canView) loadAccounts(appliedSearch)

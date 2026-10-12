@@ -29,9 +29,7 @@ public class RoleAssignmentResolver {
         return roleAssignmentService.rolesForSubject(subjectId, subjectType);
     }
 
-    // SUPER_ADMIN: may assign any applicable role to anyone.
-    // Anyone holding CUSTOMER_ROLE_ASSIGN (e.g. an account officer): may assign
-    // customer roles to CUSTOMER subjects only.
+    
     @DgsMutation
     public Mono<Boolean> assignRole(@InputArgument("subjectId") UUID subjectId,
                                     @InputArgument("subjectType") String subjectType,

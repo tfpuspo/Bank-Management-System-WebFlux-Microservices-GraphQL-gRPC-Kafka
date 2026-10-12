@@ -7,9 +7,7 @@ import type { MenuComponentProps } from '@/types/menu'
 
 export default function AssignRolePage({}: MenuComponentProps) {
   const [subjectType, setSubjectType] = useState<'CUSTOMER' | 'STAFF'>('STAFF')
-  // For STAFF this is the user's id; for CUSTOMER it is the user's customerId.
   const [subjectId, setSubjectId] = useState('')
-  // The role's label, e.g. "BRANCH_MANAGER" — this is what assignRole expects.
   const [roleCode, setRoleCode] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -44,8 +42,6 @@ export default function AssignRolePage({}: MenuComponentProps) {
     }
   }, [])
 
-  // Only show users of the selected type. Customers can only be listed once they
-  // have registered (that is when their user record, and customerId, exist).
   const userOptions = useMemo(
     () =>
       users
@@ -59,8 +55,6 @@ export default function AssignRolePage({}: MenuComponentProps) {
     [users, subjectType]
   )
 
-  // A role can be assigned if it is not restricted to a subject type (no parent),
-  // or if its parent is the selected subject type — same rule the server enforces.
   const roleOptions = useMemo(() => {
     const subjectTypeAlkp = subjectTypes.find(
       (s) => s.label.toUpperCase() === subjectType.toUpperCase()

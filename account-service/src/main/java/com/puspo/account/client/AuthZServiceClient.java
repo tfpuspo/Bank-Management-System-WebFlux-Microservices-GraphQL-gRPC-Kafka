@@ -51,7 +51,7 @@ public class AuthZServiceClient {
                 });
     }
 
-    /** Assigns a role as the logged-in caller (token is forwarded so authZ checks the caller's rights). */
+
     @SuppressWarnings("unchecked")
     public Mono<Boolean> assignRole(String token, UUID subjectId, String subjectType, String roleCode) {
         String query = """
