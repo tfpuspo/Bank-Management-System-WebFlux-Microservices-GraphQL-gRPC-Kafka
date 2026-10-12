@@ -13,10 +13,15 @@ Bank Application Video Recording Link: https://drive.google.com/drive/folders/1P
   </a>
 </div>
 
+
+
 <div align="center">
   <h3>Part 2</h3>
-  <a href="https://github.com/user-attachments/assets/6ae86756-54cb-4253-af535dd5987f3505">
-    <img src="records/customer.png" width="700" height="400" alt="Part 2 - Customer demo">
+  <a href="https://github.com/user-attachments/assets/ddcce9cd-56c7-46c9-b07a-27d7015122fc">
+    <img src="records/customer.png"
+         width="700"
+         height="400"
+         alt="Part 2 - Customer demo">
   </a>
 </div>
 
