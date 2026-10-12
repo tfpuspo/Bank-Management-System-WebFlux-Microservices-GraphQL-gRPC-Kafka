@@ -40,10 +40,11 @@ Tools & Technology:
 
 
 Completed Features:
+ - Role-based menu access control system, enabling dynamic role and permission management
  - User registration (auth-service)
  - Identity verification via account number lookup (auth-service → account-service)
  - Identity match on date of birth and mobile number (auth-service → customer-service)
  - OTP generation, delivery (via SMS), and verification for identity confirmation (auth-service ↔ notification-service, Redis + Kafka outbox)
  - Credential setup & account activation — creates username/password linked to verified customer, with welcome notification (auth-service → notification-service)
- - Role-based menu access control system, enabling dynamic role and permission management
+ 
 
