@@ -7,7 +7,7 @@
 
 <div align="center">
   <h3>Part 1</h3>
-  <a href="https://github.com/user-attachments/assets/3f7610cb-8c1b-4076-a0c6-5075c60422df">
+  <a href="https://drive.google.com/drive/folders/1PUa2bbuZyb0PKn6EBXFBtXdK4DFlnmks?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto/part1.mp4">
     <img src="records/backend_team.png" width="700" height="400" alt="Part 1 - backend_team demo">
   </a>
 </div>
