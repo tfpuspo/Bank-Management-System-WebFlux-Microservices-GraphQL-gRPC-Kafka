@@ -4,17 +4,18 @@
 
 ### A Bank Management System built on Spring Webflux, Microservices, GraphQL, gRPC, Kafka (Work-in-progress)
 
+Bank Application Video Recording Link: https://drive.google.com/drive/folders/1PUa2bbuZyb0PKn6EBXFBtXdK4DFlnmks?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
 
 <div align="center">
   <h3>Part 1</h3>
-  <a href="https://drive.google.com/drive/folders/1PUa2bbuZyb0PKn6EBXFBtXdK4DFlnmks?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto/part1.mp4">
+  <a href="https://github.com/user-attachments/assets/e8d9de4e-56cd-4470-b595-c7c9ad51e22e">
     <img src="records/backend_team.png" width="700" height="400" alt="Part 1 - backend_team demo">
   </a>
 </div>
 
 <div align="center">
   <h3>Part 2</h3>
-  <a href="https://github.com/user-attachments/assets/08cb881b-fd49-4f82-83b8-f155b535508c">
+  <a href="https://github.com/user-attachments/assets/6ae86756-54cb-4253-af535dd5987f3505">
     <img src="records/customer.png" width="700" height="400" alt="Part 2 - Customer demo">
   </a>
 </div>
